@@ -12,9 +12,6 @@ export class ListarLivrosComponent implements OnInit {
 
   ngOnInit(){
     this.livros = this.listarTodos();
-    this.livros =[
-      new Livro(1, "Vidas Secas", "Graciliano Ramos", 1938 )  
-    ]
   }
     listarTodos(): Livro[]{
       return this.livroService.listarTodos();

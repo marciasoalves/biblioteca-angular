@@ -11,4 +11,11 @@ export class LivroService {
     const livros = localStorage ['livro']
     return livros?JSON.parse(livros):[];
   }
+
+  cadastrar(livro: Livro ):void{
+    const livros = this.listarTodos(); 
+    livro.id = new Date(). getTime();
+    livros.push(livro);
+    localStorage['livro'] = JSON.stringify(livros)
+  }
 }
